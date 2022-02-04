@@ -3,7 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ActivityFeed from './components/ActivityFeed.jsx';
 import ArchiveDetail from './components/ArchiveDetail.jsx';
-import NewWindow from 'react-new-window';
+import ActivityDetail from './components/ActivityDetail.jsx';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -23,10 +24,11 @@ const App = () => {
      
       <Link to="/ActivityFeed">All calls</Link>&emsp;&emsp;
       <Link to="/ArchiveDetail" >Archives</Link>
-      <ActivityFeed/>
+      {/* <ActivityFeed/> */}
       <Switch>
         <Route path="/ActivityFeed">< ActivityFeed/></Route>
         <Route path="/ArchiveDetail">< ArchiveDetail/></Route>
+        <Route path="/ActivityDetail">< ActivityDetail/></Route>
         </Switch>
         </Router>
       </div>
@@ -35,6 +37,6 @@ const App = () => {
   );
 };
 
-ReactDOM.render(<App/>, document.getElementById('app'));
+ ReactDOM.render(<App/>, document.getElementById('app'));
 
 export default App;
