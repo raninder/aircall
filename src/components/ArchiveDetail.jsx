@@ -3,7 +3,7 @@ import axios from "axios";
 import Activity from "./Activity.jsx";
 import { FcPhone } from "react-icons/fc";
 
-const Activity = () => {
+const ArchiveDetail = () => {
 const [acts,setActs] = useState([]);
 
 	 const url = "https://aircall-job.herokuapp.com/activities";
