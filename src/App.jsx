@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ActivityFeed from './components/ActivityFeed.jsx';
 import ArchiveDetail from './components/ArchiveDetail.jsx';
+import NewWindow from 'react-new-window';
 import {
   BrowserRouter as Router,
   Switch,
