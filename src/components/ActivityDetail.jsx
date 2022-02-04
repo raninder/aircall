@@ -10,8 +10,7 @@ import {
 
 } from "react-router-dom";
 
-
-export default function ActivityDetail() {
+const ActivityDetail = () => {
 	 const [acts,setActs] = useState({});
 	 const location = useLocation();
 		let id = location.state.id;
@@ -88,3 +87,5 @@ return(
 ); 
 
 }
+
+export default ActivityDetail;

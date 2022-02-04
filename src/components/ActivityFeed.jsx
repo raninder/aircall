@@ -3,7 +3,7 @@ import axios from "axios";
 import Activity from "./Activity.jsx";
 
 
-export default function ActivityFeed() {
+const ActivityFeed = () => {
 	 const [acts,setActs] = useState([]);
 
 	 const url = "https://aircall-job.herokuapp.com/activities";
@@ -34,3 +34,5 @@ return(
 	); 
 
 }
+
+export default ActivityFeed;

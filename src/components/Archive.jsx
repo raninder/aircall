@@ -3,7 +3,7 @@ import axios from "axios";
 import { useLocation } from 'react-router-dom';
 
 
-export default function Archive(props) {
+const Archive = (props) => {
 	const location = useLocation();
 	const id = location.state.id;
 	const is_archived = location.state.arch;
@@ -31,8 +31,9 @@ export default function Archive(props) {
 	}
 
 	return(
-		<div>
-			
-		</div>
+		<div/>
+		
 	)
 }
+
+export default Archive;

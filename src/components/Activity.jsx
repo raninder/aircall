@@ -11,7 +11,7 @@ import {
 } from "react-router-dom";
 
 
-export default function Activity(props) {
+const Activity = (props) => {
 
   const { id,created_at,direction, from, to, duration, call_type} = props;
 
@@ -26,7 +26,6 @@ export default function Activity(props) {
    <div > 
 		 <center>{date} </center>
 		
-		 {/* <Link to="/ActivityDetail">Click to login</Link> */}
 		<div className="card">
 				<div className="card-body">
 						<p className="card-text">
@@ -56,3 +55,5 @@ export default function Activity(props) {
 		</div>
   );
 }
+
+export default Activity;
