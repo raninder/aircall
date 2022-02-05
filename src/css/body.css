@@ -18,5 +18,10 @@ body {
   float:right;
 }
 .text{
-  font-size: 25px;
+  font-size: 20px;
+  line-height: 3;
+}
+button{
+  background: transparent;
+  border: none;
 }

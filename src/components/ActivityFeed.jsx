@@ -27,7 +27,7 @@ const ActivityFeed = () => {
 
 return(
 	<div>
-		<div><h3>Activity</h3></div>
+	
 				{allActs}
 	</div>
 

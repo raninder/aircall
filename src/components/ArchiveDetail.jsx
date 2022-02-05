@@ -1,7 +1,6 @@
 import React, {useEffect,useState } from "react";
 import axios from "axios";
 import Activity from "./Activity.jsx";
-import { FcPhone } from "react-icons/fc";
 
 const ArchiveDetail = () => {
 const [acts,setActs] = useState([]);
@@ -26,7 +25,7 @@ const [acts,setActs] = useState([]);
 
 return(
 	<div>
-		<FcPhone/> Archived Calls
+	 <p><h5> <center>Archived Calls </center></h5></p>
 		<div >
 			{allActs}
 		</div>

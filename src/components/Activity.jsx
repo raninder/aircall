@@ -1,6 +1,9 @@
 import React, { useState,useEffect } from "react";
 import ActivityDetail from "./ActivityDetail.jsx";
 import { BsTelephoneInboundFill } from "react-icons/bs";
+import {FiPhoneMissed } from "react-icons/fi";
+import {useHistory} from "react-router-dom";
+import { IconContext } from "react-icons";
 
 import {
   BrowserRouter as Router, 
@@ -14,7 +17,7 @@ import {
 const Activity = (props) => {
 
   const { id,created_at,direction, from, to, duration, call_type} = props;
-
+		const history = useHistory();
 		let data= new Date(created_at);
 		const time = data.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
 		console.log("time",time);
@@ -30,23 +33,20 @@ const Activity = (props) => {
 				<div className="card-body">
 						<p className="card-text">
 						
-							{call_type === "missed" &&
-							<BsTelephoneInboundFill/> }
+							{call_type === "missed" ?
+							<IconContext.Provider
+							value={{ color: 'red' }}
+						>
+								<FiPhoneMissed /> 
+								</IconContext.Provider>
+							:
+							<IconContext.Provider
+							value={{ color: 'green' }}>
+							<BsTelephoneInboundFill/>
+							</IconContext.Provider>
+						}
 					
-						<Router>
-							<span>
-							<Link 
-								to={{ 
-									pathname: "/ActivityDetail",
-									state: { id }
-								}} 
-								>	{from} </Link>
-							</span>
-							<Switch>
-								<Route path="/ActivityDetail"><ActivityDetail/></Route>
-							</Switch>
-						</Router>
-					
+					<button onClick = {()=> history.push("/ActivityDetail",{id})}>{from}</button>
 						<span className="right">{time} </span>
 						 </p>
 						 
